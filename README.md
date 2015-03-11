@@ -1,6 +1,8 @@
 passport-suzuri - OAuth2.0 npm package for SUZURI OAuth
 ================
 
+[![NPM](https://nodei.co/npm/passport-suzuri.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/passport-suzuri/)
+
 ## Introduction
 
 [Passport](http://passportjs.org/) strategy for authenticating with [SUZURI Developer Center](https://suzuri.jp/developer/documentation/v1) using the OAuth 2.0 API
@@ -46,4 +48,4 @@ So this process is not required with this module.
 
 ### License
 
-MIT License. Please see the LICENSE file for details.
+[MIT](http://kitak.mit-license.org/)
