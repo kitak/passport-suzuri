@@ -23,20 +23,21 @@ You can get this id from [SUZURI Developer Center](https://suzuri.jp/developer/)
 
 ### Authorization Endpoint
 
-    var passport = require('passport');
-    var SuzuriStrategy = require('passport-suzuri').SuzuriStrategy;
+```javascript
+var passport = require('passport');
+var SuzuriStrategy = require('passport-suzuri').SuzuriStrategy;
 
-  passport.use(new SuzuriStrategy({
-      clientID     : <SUZURI_APP_ID>,
-    clientSecret : <SUZURI_APP_SECRET>,
-    callbackURL  : <CALL_BACK_URL>,
-  }, function(accessToken, refreshtoken, profile, done){
-      // With this accessToken you can access user profile data.
-    // In the case that accessToken is expired, you should
-    // regain it with refreshToken. So you have to keep these token
-    // safely. done will get user profile data such as openid in YConnect
-  });
-
+passport.use(new SuzuriStrategy({
+  clientID     : <SUZURI_CLIENT_ID>,
+  clientSecret : <SUZURI_CLIENT_SECRET>,
+  callbackURL  : <CALL_BACK_URL>,
+}, function(accessToken, refreshtoken, profile, done){
+  // With this accessToken you can access user profile data.
+  // In the case that accessToken is expired, you should
+  // regain it with refreshToken. So you have to keep these token
+  // safely. done will get user profile data such as openid in YConnect
+});
+```
 ### Token Endpoint
 
 With this module, you don't have to do anything to get accessToken.
